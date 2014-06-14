@@ -2,6 +2,13 @@ README.md skip
 
 bin skip
 .bashrc.load skip
+
 osx skip
+
+.gitmodules skip
+
 .config skip
 .config/fish recurse
+
+.vim skip
+.vim/bundle recurse
