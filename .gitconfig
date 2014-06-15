@@ -1,0 +1,7 @@
+[user]
+	email = davee@daveenguyen.com
+	name = Davee Nguyen
+[diff]
+	tool = vimdiff
+[push]
+	default = simple
