@@ -1,3 +1,4 @@
+" Workaround for using fish with NeoBundle
 if &shell =~# 'fish$'
     set shell=sh
 endif
@@ -18,16 +19,9 @@ call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
-" NeoBundle 'Shougo/neosnippet.vim'
-" NeoBundle 'Shougo/neosnippet-snippets'
-" NeoBundle 'tpope/vim-fugitive'
-" NeoBundle 'kien/ctrlp.vim'
-" NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'bling/vim-airline'
-
-" You can specify revision/branch/tag.
-" NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+NeoBundle 'tpope/vim-commentary'
 
 " Required:
 call neobundle#end()
@@ -115,19 +109,12 @@ noremap k gk
 " referenced.
 
 " Map the key for toggling comments with vim-commentary
-"nnoremap <leader>c <Plug>CommentaryLine
-
-" Remap ctrlp to ctrl-t -- map it however you like, or stick with the
-" defaults. Additionally, in my OS, I remap caps lock to control. I never use
-" caps lock. This is highly recommended.
-"let g:ctrlp_map = '<c-t>'
-
-" Let ctrlp have up to 30 results.
-"let g:ctrlp_max_height = 30
+" nnoremap <leader>c <Plug>CommentaryLine
 
 
 " Finally the color scheme. Choose whichever you want from the list in the
 " link above (back up where we included the bundle of a ton of themes.)
+set background=dark
 colorscheme base16-eighties
 
 
@@ -152,7 +139,6 @@ endif
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
-set background=dark
 
 " Always show status bar for vim-airline
 set laststatus=2
