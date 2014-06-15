@@ -11,6 +11,7 @@ cask install dropbox-experimental
 cask install flux-beta
 cask install google-chrome-dev
 cask install google-drive
+cask install iterm2-beta
 cask install lastpass-universal
 cask install sublime-text3
 
