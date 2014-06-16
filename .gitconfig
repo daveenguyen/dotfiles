@@ -1,7 +1,41 @@
 [user]
-	email = davee@daveenguyen.com
-	name = Davee Nguyen
-[diff]
-	tool = vimdiff
+    name = Davee Nguyen
+    email = davee@daveenguyen.com
+[core]
+    excludesfile = ~/.gitignore_global
+    autocrlf = input
+    safecrlf = warn
+    editor = vim
+[mergetool]
+    keepBackup = true
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status -sb
+    unstage = reset HEAD --
+    last = log --graph --pretty=format:\"%h %ad | %s%d [%an]\" --date=short -1 HEAD
+    hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    hist-ascii = log --graph --pretty=format:'%h -%d %s (%cr) <%an>' --abbrev-commit
+    di = diff --word-diff
+    d = difftool
+    amend = commit --amend
+    undo = reset --soft HEAD^
+    count = shortlog -sn
+    credit = --amend --author "$1 <$2>" -C HEAD
+    ignorelocal = update-index --assume-unchanged
+    unignorelocal = update-index --no-assume-unchanged
 [push]
-	default = simple
+    default = simple
+
+[merge]
+    tool = vimdiff
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
