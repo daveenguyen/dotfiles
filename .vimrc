@@ -20,6 +20,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
 NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'tpope/vim-commentary'
 
@@ -37,6 +38,7 @@ NeoBundleCheck
 
 syntax on
 
+" Tabs settings--------------------------------
 set tabstop=4     " number of spaces for tab character
 set shiftwidth=4  " number of spaces to (auto)indent
 set softtabstop=4
@@ -55,7 +57,8 @@ set noswapfile    " They're just annoying. Who likes them?
 set hidden        " allow me to have buffers with unsaved changes.
 set autoread      " when a file has changed on disk, just load it. Don't ask.
 
-" Make search more sane
+
+" Search Settings - Make search more sane------
 set ignorecase    " case insensitive search
 set smartcase     " If there are uppercase letters, become case-sensitive.
 set incsearch     " live incremental searching
@@ -71,6 +74,7 @@ set virtualedit+=block
 let mapleader = ","
 
 
+" Mappings-------------------------------------
 " So we don't have to press shift when we want to get into command mode.
 nnoremap ; :
 vnoremap ; :
@@ -123,12 +127,11 @@ set number
 set ruler " show cursor position all the time
 set encoding=utf-8
 
-" Show trailing spaces as '-'
-set listchars=tab:>-,trail:-
-set list
+" Show trailing spaces as '·'
+set list listchars=tab:»·,trail:·
 
-" Remove trailing whitespaces for specific filetypes
-" autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> :%s/\s\+$//e
+" Remove trailing whitespaces for specific filetypes upon :w
+autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " if have mouse, enable
 if has('mouse')
