@@ -1,17 +1,16 @@
 # Install native apps
 # Usage: `brew bundle Caskfile`
 
-install caskroom/cask/brew-cask
-tap caskroom/versions
+brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
 
-cask install android-studio
-cask install bartender
-cask install bettertouchtool
-cask install dropbox-experimental
-cask install flux-beta
-cask install google-chrome-dev
-cask install google-drive
-cask install iterm2-beta
-cask install lastpass-universal
-cask install sublime-text3
+brew cask install bartender
+brew cask install bettertouchtool
+#brew cask install dropbox-experimental
+brew cask install flux
+brew cask install google-chrome-beta
+#brew cask install google-drive
+brew cask install iterm2-beta
+#brew cask install lastpass-universal
+brew cask install sublime-text3
 
