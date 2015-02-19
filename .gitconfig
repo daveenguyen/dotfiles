@@ -27,7 +27,7 @@
     amend = commit --amend
     undo = reset --soft HEAD^
     count = shortlog -sn
-    credit = --amend --author "$1 <$2>" -C HEAD
+    credit = commit --amend --author "$1 <$2>" -C HEAD
     ignorelocal = update-index --assume-unchanged
     unignorelocal = update-index --no-assume-unchanged
 [push]
